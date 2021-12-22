@@ -4,14 +4,14 @@
     "C:\\Udemy Course\\Reactivities\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {
+    "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\ssoni\\.nuget\\packages\\",
-        "outputPath": "C:\\Udemy Course\\Reactivities\\Domain\\obj\\",
+        "outputPath": "c:\\Udemy Course\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj"
+              "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj"
               }
             }
           }
@@ -105,6 +105,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

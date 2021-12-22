@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {}
+    "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {
+    "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Udemy Course\\Reactivities\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\ssoni\\.nuget\\packages\\",
-        "outputPath": "C:\\Udemy Course\\Reactivities\\Domain\\obj\\",
+        "outputPath": "c:\\Udemy Course\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
