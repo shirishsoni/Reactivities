@@ -19,7 +19,7 @@ export default class ProfileStore {
             () => this.activeTab,
             activeTab => {
                 if (activeTab === 3 || activeTab === 4) {
-                    const predicate = activeTab === 4 ? 'followers' : 'following';
+                    const predicate = activeTab === 3 ? 'followers' : 'following';
                     this.loadFollowings(predicate);
                 } else {
                     this.followings = [];
