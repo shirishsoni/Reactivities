@@ -1,12 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Persistence;
 using Domain;
@@ -27,6 +19,7 @@ namespace API
             {
                 var context = services.GetRequiredService<DataContext>();
                 var userManager = services.GetRequiredService<UserManager<AppUser>>();
+                AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
                 await context.Database.MigrateAsync();
                 await Seed.SeedData(context, userManager);
             }
