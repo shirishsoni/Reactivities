@@ -94,6 +94,7 @@ namespace API.Controllers
             var user = await _userManager.Users.Include(p => p.Photos)
                 .FirstOrDefaultAsync(x => x.Email == User.FindFirstValue(ClaimTypes.Email));
 
+            await SetRefreshToken(user);
             return CreateUserObject(user);
         }
 
@@ -149,7 +150,7 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> RefreshToken()
         {
             var refreshToken = Request.Cookies["refreshToken"];
-            var user = await _userManager.Users.Include(r => r.RefreshTokens)
+            var user = await _userManager.Users
                 .Include(r => r.RefreshTokens)
                 .Include(p => p.Photos)
                 .FirstOrDefaultAsync(x => x.UserName == User.FindFirstValue(ClaimTypes.Name));
