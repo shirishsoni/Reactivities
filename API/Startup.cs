@@ -24,7 +24,7 @@ namespace API
                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
                 opt.Filters.Add(new AuthorizeFilter(policy));
             })
-                .AddFluentValidation(config => 
+                .AddFluentValidation(config =>
             {
                 config.RegisterValidatorsFromAssemblyContaining<Create>();
             });
@@ -48,8 +48,8 @@ namespace API
                 .FormActions(s => s.Self())
                 .FrameAncestors(s => s.Self())
                 .ImageSources(s => s.Self().CustomSources(
-                    "https://res.cloudinary.com", 
-                    "https://www.facebook.com", 
+                    "https://res.cloudinary.com",
+                    "https://www.facebook.com",
                     "https://platform-lookaside.fbsbx.com"
                     ))
                 .ScriptSources(s => s.Self()
@@ -65,7 +65,7 @@ namespace API
             }
             else
             {
-                app.Use(async (context, next) => 
+                app.Use(async (context, next) =>
                 {
                     context.Response.Headers.Add("Strict-Transport-Security", "max-age=3153600");
                     await next.Invoke();
